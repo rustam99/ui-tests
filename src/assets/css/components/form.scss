@@ -1,0 +1,30 @@
+.form {
+	&__group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__group + &__group {
+		margin-top: 40px;
+	}
+
+	.form-field + .form-field,
+	.form-field + &__row,
+	&__row + .form-field,
+	&__button {
+		margin-top: 20px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		.form-field {
+			width: calc(50% - 10px);
+		}
+
+		.form-field + .form-field {
+			margin-top: 0;
+		}
+	}
+}
